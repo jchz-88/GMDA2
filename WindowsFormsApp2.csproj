@@ -14,6 +14,8 @@
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -27,18 +29,21 @@
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -51,7 +56,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>24-technical-support_icon-icons.com_52845.ico</ApplicationIcon>
+    <ApplicationIcon>icons8-pulpo-60_1.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>false</SignManifests>
@@ -68,13 +73,19 @@
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -85,19 +96,189 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="brawser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="brawser.Designer.cs">
+      <DependentUpon>brawser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="conexiones.cs" />
+    <Compile Include="pMenu\bus\plan_note.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pMenu\bus\plan_note.Designer.cs">
+      <DependentUpon>plan_note.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pMenu\menu_r\alertas\banner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pMenu\menu_r\alertas\banner.Designer.cs">
+      <DependentUpon>banner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pMenu\menu_r\alertas\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pMenu\menu_r\alertas\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pMenu\bus\plantillas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pMenu\bus\plantillas.Designer.cs">
+      <DependentUpon>plantillas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pMenu\menu_r\alertas\nueva_alerta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pMenu\menu_r\alertas\nueva_alerta.Designer.cs">
+      <DependentUpon>nueva_alerta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pMenu\menu_r\clip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pMenu\menu_r\clip.Designer.cs">
+      <DependentUpon>clip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pMenu\menu_r\config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pMenu\menu_r\config.Designer.cs">
+      <DependentUpon>config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pMenu\menu_r\correos\App.cs" />
+    <Compile Include="pMenu\menu_r\correos\carga_correo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pMenu\menu_r\correos\carga_correo.Designer.cs">
+      <DependentUpon>carga_correo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pMenu\menu_r\correos\correo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pMenu\menu_r\correos\correo.Designer.cs">
+      <DependentUpon>correo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pMenu\menu_r\correos\TokenCache.cs" />
+    <Compile Include="pMenu\menu_r\menu_r.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pMenu\menu_r\menu_r.Designer.cs">
+      <DependentUpon>menu_r.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pMenu\bus\accesos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pMenu\bus\accesos.Designer.cs">
+      <DependentUpon>accesos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="conex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="conex.Designer.cs">
+      <DependentUpon>conex.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
+      <CustomToolNamespace>HMDA</CustomToolNamespace>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="pMenu\bus\resBus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pMenu\bus\resBus.Designer.cs">
+      <DependentUpon>resBus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pMenu\bus\sitios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pMenu\bus\sitios.Designer.cs">
+      <DependentUpon>sitios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pMenu\menu_r\submenu1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pMenu\menu_r\submenu1.Designer.cs">
+      <DependentUpon>submenu1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pMenu\menu_r\titulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pMenu\menu_r\titulos.Designer.cs">
+      <DependentUpon>titulos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="scanIP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="scanIP.Designer.cs">
+      <DependentUpon>scanIP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Settings.cs" />
+    <Compile Include="pMenu\menu_r\tituS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pMenu\menu_r\tituS.Designer.cs">
+      <DependentUpon>tituS.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="brawser.resx">
+      <DependentUpon>brawser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pMenu\bus\plan_note.resx">
+      <DependentUpon>plan_note.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pMenu\menu_r\alertas\banner.resx">
+      <DependentUpon>banner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pMenu\menu_r\alertas\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pMenu\bus\plantillas.resx">
+      <DependentUpon>plantillas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pMenu\menu_r\alertas\nueva_alerta.resx">
+      <DependentUpon>nueva_alerta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pMenu\menu_r\clip.resx">
+      <DependentUpon>clip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pMenu\menu_r\config.resx">
+      <DependentUpon>config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pMenu\menu_r\correos\carga_correo.resx">
+      <DependentUpon>carga_correo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pMenu\menu_r\correos\correo.resx">
+      <DependentUpon>correo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pMenu\menu_r\menu_r.resx">
+      <DependentUpon>menu_r.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pMenu\bus\accesos.resx">
+      <DependentUpon>accesos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="conex.resx">
+      <DependentUpon>conex.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pMenu\bus\resBus.resx">
+      <DependentUpon>resBus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pMenu\bus\sitios.resx">
+      <DependentUpon>sitios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pMenu\menu_r\submenu1.resx">
+      <DependentUpon>submenu1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pMenu\menu_r\titulos.resx">
+      <DependentUpon>titulos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -109,6 +290,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="pMenu\menu_r\tituS.resx">
+      <DependentUpon>tituS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scanIP.resx">
+      <DependentUpon>scanIP.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -124,8 +311,120 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="1486564398-menu2_81519.ico" />
-    <Content Include="24-technical-support_icon-icons.com_52845.ico" />
+    <None Include="Resources\turn-left.png" />
+    <None Include="Resources\turn-down1.png" />
+    <None Include="Resources\turn-down.png" />
+    <None Include="Resources\3d.png" />
+    <None Include="Resources\application %281%29.png" />
+    <None Include="Resources\application.png" />
+    <None Include="Resources\reload %281%29.png" />
+    <None Include="Resources\icons8-pulpo-96.png" />
+    <None Include="Resources\icons8-pulpo-60.png" />
+    <None Include="Resources\icons8-pulpo-60222.png" />
+    <None Include="Resources\icons8-jake.gif" />
+    <None Include="Resources\icons8-pulpo.gif" />
+    <None Include="Resources\icons8-cancelar-60.png" />
+    <None Include="Resources\icons8-cancelar-601.png" />
+    <None Include="Resources\icons8-cancelar-60 %281%29.png" />
+    <None Include="Resources\unnamed-removebg-preview.png" />
+    <None Include="Resources\unnamed-removebg-preview %281%29.png" />
+    <None Include="Resources\computer-networks.png" />
+    <None Include="Resources\computer-networking.png" />
+    <None Include="Resources\icons8-pulpo-64 %281%29.png" />
+    <None Include="Resources\floppy-disk1.png" />
+    <None Include="Resources\floppy-disk.png" />
+    <None Include="Resources\change.png" />
+    <None Include="Resources\44cd3782a3f79126f85eb068167ace5c.gif" />
+    <None Include="Resources\giphy %281%29.gif" />
+    <None Include="Resources\secure1.png" />
+    <None Include="Resources\letter %281%29.png" />
+    <None Include="Resources\letter.png" />
+    <None Include="Resources\99fe260bcfc3454b909bd8f27771668b.png" />
+    <None Include="Resources\trash.png" />
+    <None Include="Resources\paste.png" />
+    <None Include="Resources\database.png" />
+    <None Include="Resources\no-laptop.png" />
+    <None Include="Resources\aprobado1.png" />
+    <None Include="Resources\garrapata.png" />
+    <None Include="Resources\minus-sign.png" />
+    <None Include="Resources\comprobar %281%29.png" />
+    <None Include="Resources\plus %281%29.png" />
+    <None Include="Resources\book.png" />
+    <None Include="Resources\skill.png" />
+    <None Include="Resources\campana1.png" />
+    <None Include="Resources\alerta.png" />
+    <None Include="Resources\website.png" />
+    <None Include="Resources\campana.png" />
+    <None Include="Resources\basura.png" />
+    <None Include="Resources\menu.png" />
+    <None Include="Resources\screenshot.png" />
+    <None Include="Resources\llave-inglesa.png" />
+    <None Include="Resources\anillo-de-campana.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\intranet.png" />
+    <None Include="Resources\envelope %281%29.png" />
+    <None Include="Resources\alfiler %282%29.png" />
+    <None Include="Resources\more.png" />
+    <None Include="Resources\alfiler %281%29.png" />
+    <None Include="Resources\close %283%29.png" />
+    <None Include="Resources\alfiler.png" />
+    <None Include="Resources\name.png" />
+    <None Include="Resources\link.png" />
+    <None Include="Resources\color-wheel.png" />
+    <None Include="Resources\cross.png" />
+    <None Include="Resources\forbidden.png" />
+    <None Include="Resources\senal-de-stop.png" />
+    <None Include="Resources\flecha-izquierda %281%29.png" />
+    <None Include="Resources\flecha-izquierda.png" />
+    <None Include="Resources\previous.png" />
+    <None Include="Resources\tasks.png" />
+    <None Include="Resources\copy1.png" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\right-arrow.png" />
+    <None Include="Resources\left.png" />
+    <None Include="Resources\burbuja-de-dialogo %281%29.png" />
+    <None Include="Resources\burbuja-de-dialogo.png" />
+    <None Include="Resources\Host1.png" />
+    <None Include="Resources\reload.png" />
+    <None Include="Resources\close %282%29.png" />
+    <None Include="Resources\codificacion-web.png" />
+    <None Include="Resources\share-arrow.png" />
+    <None Include="Resources\share.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\cartoon-snail-loading-loading-gif-animation_27341391.png" />
+    <None Include="Resources\65ba488626025cff82f091336fbf94bb.gif" />
+    <None Include="Resources\cartoon-snail-loading-loading-gif-animation_2734139.png" />
+    <None Include="Resources\disco-flexible.png" />
+    <None Include="Resources\computadora-personal %281%29.png" />
+    <None Include="Resources\repost.png" />
+    <None Include="Resources\eliminar.png" />
+    <None Include="Resources\agregar %281%29.png" />
+    <None Include="Resources\agregar.png" />
+    <None Include="Resources\error %281%29.png" />
+    <None Include="Resources\images %282%29.png" />
+    <None Include="Resources\impresora.png" />
+    <None Include="Resources\ssh %281%29.png" />
+    <None Include="Resources\computadora-personal.png" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\detener1.png" />
+    <None Include="Resources\tocar.png" />
+    <None Include="Resources\usuario.png" />
+    <None Include="Resources\magnifying_glass_icon_129144.png" />
+    <None Include="Resources\network-switch.png" />
+    <None Include="Resources\web.png" />
+    <None Include="Resources\microchip.png" />
+    <None Include="Resources\blogger.png" />
+    <None Include="Resources\logistics.png" />
+    <None Include="Resources\counter.png" />
+    <None Include="Resources\hadouken-email-blast-mail.gif" />
+    <None Include="Resources\interaction.png" />
+    <None Include="Resources\aprobado.png" />
+    <None Include="Resources\detener.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\linked.png" />
+    <None Include="Resources\remove.png" />
+    <None Include="Resources\copy.png" />
     <None Include="Resources\code.png" />
     <None Include="Resources\agreement.png" />
     <None Include="Resources\boton-eliminar.png" />
@@ -184,7 +483,47 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="NewFolder1\" />
+    <PackageReference Include="Azure.Identity">
+      <Version>1.10.0</Version>
+    </PackageReference>
+    <PackageReference Include="CefSharp.WinForms">
+      <Version>116.0.130</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Graph">
+      <Version>5.24.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Identity.Client">
+      <Version>4.55.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Identity.Client.Broker">
+      <Version>4.55.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Identity.Client.Desktop">
+      <Version>4.55.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel">
+      <Version>7.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications">
+      <Version>7.1.3</Version>
+    </PackageReference>
+    <PackageReference Include="SpreadsheetLight">
+      <Version>3.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Buffers">
+      <Version>4.5.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Numerics.Vectors">
+      <Version>4.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime">
+      <Version>4.3.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8-pulpo-60_1.ico" />
+    <None Include="Resources\expand.png" />
+    <None Include="Resources\maximize.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

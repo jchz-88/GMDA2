@@ -12,7 +12,7 @@ namespace HMDA.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.5.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -102,6 +102,276 @@ namespace HMDA.Properties {
             }
             set {
                 this["firma"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(";")]
+        public string cc {
+            get {
+                return ((string)(this["cc"]));
+            }
+            set {
+                this["cc"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string user {
+            get {
+                return ((string)(this["user"]));
+            }
+            set {
+                this["user"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string bt_edit1_nombre {
+            get {
+                return ((string)(this["bt_edit1_nombre"]));
+            }
+            set {
+                this["bt_edit1_nombre"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color bt_edit1_color {
+            get {
+                return ((global::System.Drawing.Color)(this["bt_edit1_color"]));
+            }
+            set {
+                this["bt_edit1_color"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string bt_edit1_enlace {
+            get {
+                return ((string)(this["bt_edit1_enlace"]));
+            }
+            set {
+                this["bt_edit1_enlace"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string bt_edit2_nombre {
+            get {
+                return ((string)(this["bt_edit2_nombre"]));
+            }
+            set {
+                this["bt_edit2_nombre"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color bt_edit2_color {
+            get {
+                return ((global::System.Drawing.Color)(this["bt_edit2_color"]));
+            }
+            set {
+                this["bt_edit2_color"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string bt_edit2_enlace {
+            get {
+                return ((string)(this["bt_edit2_enlace"]));
+            }
+            set {
+                this["bt_edit2_enlace"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string bt_edit3_nombre {
+            get {
+                return ((string)(this["bt_edit3_nombre"]));
+            }
+            set {
+                this["bt_edit3_nombre"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color bt_edit3_color {
+            get {
+                return ((global::System.Drawing.Color)(this["bt_edit3_color"]));
+            }
+            set {
+                this["bt_edit3_color"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string bt_edit3_enlace {
+            get {
+                return ((string)(this["bt_edit3_enlace"]));
+            }
+            set {
+                this["bt_edit3_enlace"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color bt_edit1_Fcolor {
+            get {
+                return ((global::System.Drawing.Color)(this["bt_edit1_Fcolor"]));
+            }
+            set {
+                this["bt_edit1_Fcolor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color bt_edit2_Fcolor {
+            get {
+                return ((global::System.Drawing.Color)(this["bt_edit2_Fcolor"]));
+            }
+            set {
+                this["bt_edit2_Fcolor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color bt_edit3_Fcolor {
+            get {
+                return ((global::System.Drawing.Color)(this["bt_edit3_Fcolor"]));
+            }
+            set {
+                this["bt_edit3_Fcolor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string bt_edit1_nomreal {
+            get {
+                return ((string)(this["bt_edit1_nomreal"]));
+            }
+            set {
+                this["bt_edit1_nomreal"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string bt_edit2_nomreal {
+            get {
+                return ((string)(this["bt_edit2_nomreal"]));
+            }
+            set {
+                this["bt_edit2_nomreal"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string bt_edit3_nomreal {
+            get {
+                return ((string)(this["bt_edit3_nomreal"]));
+            }
+            set {
+                this["bt_edit3_nomreal"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string server {
+            get {
+                return ((string)(this["server"]));
+            }
+            set {
+                this["server"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public string kace {
+            get {
+                return ((string)(this["kace"]));
+            }
+            set {
+                this["kace"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string correo_inicio {
+            get {
+                return ((string)(this["correo_inicio"]));
+            }
+            set {
+                this["correo_inicio"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string correo_final {
+            get {
+                return ((string)(this["correo_final"]));
+            }
+            set {
+                this["correo_final"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string correo_cc {
+            get {
+                return ((string)(this["correo_cc"]));
+            }
+            set {
+                this["correo_cc"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string correo_asunto {
+            get {
+                return ((string)(this["correo_asunto"]));
+            }
+            set {
+                this["correo_asunto"] = value;
             }
         }
     }
